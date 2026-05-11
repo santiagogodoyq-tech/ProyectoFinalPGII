@@ -2,39 +2,73 @@
 Sara Benjumea Gallego
 Santiago Godoy Quitian
 1 Pensamiento computacional
+
 Abstracción:
+
 ¿Qué se solicita?
+
 Se solicita crear una aplicación que permita gestionar eventos, compra de entradas y perfiles de usuarios, mientras se tiene en cuenta los asientos, si esta ocupados o no, mantener registros de los pagos, ademas de tener en cuenta las anomalías y registrarlas como incidencias.
+
 ¿Qué informacion es relevante?
+
 La informacion relevante son los usuarios, eventos, el recinto, las zonas, los asientos, las compras, entradas, incidencias, reportes y métricas.
+
 ¿Cómo se agrupa la informacion relevante?
+
 Usuario: idUsuario, nombre, correo, teléfono, métodos de pago.
+
 Evento: idEvento, nombre, categoría, descripción, ciudad, fecha, estado del evento, políticas y un recinto asociado.
+
 Recinto: idRecinto, nombre, dirección, ciudad. 
-Zona: idZona, nombre, capacidad, precio base 
+
+Zona: idZona, nombre, capacidad, precio base. 
+
 Asientos: idAsiento, fila, número, estado. 
-Compras: idCompra, usuario, evento, fecha, total, estado 
-Entradas: idEntrada, zona, asiento, precio final, estado 
-Incidencias: idIncidencia, tipo, descripción, fecha, entidad afectada 
+
+Compras: idCompra, usuario, evento, fecha, total, estado.
+
+Entradas: idEntrada, zona, asiento, precio final, estado.
+
+Incidencias: idIncidencia, tipo, descripción, fecha, entidad afectada.
+
 Reportes y métricas: ventas, ocupación, cancelaciones, ingresos adicionales.
+
 Descomposición:
+
  ¿Qué funcionalidades se solicitan?
+ 
 Registrarse y/o iniciar sesión, gestionar perfil, explorar eventos disponibles con filtros, consultar detalle de un evento, seleccionar entradas por zona y/o asientos, crear, modificar y cancelar una compra antes de confirmarse el pago, pagar la compra y consultar comprobantes, visualizar estado de la compra, agregar servicios adicionales a la compra, consultar historial de compras con filtros por fecha, evento y estado, descargar reportes de sus compras en csv o pdf, gestionar usuarios, gestionar eventos, gestionar recintos y zonas, gestionar asientos y su disponibilidad, gestionar compras, registrar incidencias y cambios de estado, panel de métricas, visualización de métricas, registrar usuario, iniciar sesión y modificar datos del usuario, gestionar métodos de pago simulados, consultar compras asociadas y sus detalles, crear, actualizar, eliminar y consultar eventos, publicar/pausar/cancelar eventos, consultar disponibilidad del evento por zonas y asientos, crear, actualizar, eliminar y consultar recintos, administrar zonas asociadas al recinto, crear, actualizar, eliminar y consultar zonas, definir precio base y capacidad por zona, consultar ocupación por zona, crear/actualizar/eliminar/consultar asientos por zona, cambiar estado del asiento, consultar mapa de asientos y disponibilidad, crear compras nuevas, modificar una compra antes de pagar, cancelar una compra según reglas/políticas, consultar detalle de una compra, generar entradas asociadas a una compra pagada, consultar entradas por compra y por evento, anular entradas por cancelación/reembolso, registrar incidencias y asociarlas a eventos o compras, consultar incidencias por rango de fechas y tipo.
+
 ¿Cómo se distribuyen las funcionalidades? 
+
 Usuario: Registrarse y/o iniciar sesión, gestionar perfil, explorar eventos disponibles con filtros, consultar detalle de un evento, seleccionar entradas por zona y/o asientos, crear, modificar y cancelar una compra antes de confirmarse el pago, pagar la compra y consultar comprobantes, visualizar estado de la compra, agregar servicios adicionales a la compra, consultar historial de compras con filtros por fecha, evento y estado, descargar reportes de sus compras en csv o pdf, gestionar usuarios, gestionar eventos, gestionar recintos y zonas, gestionar asientos y su disponibilidad, gestionar compras, registrar incidencias y cambios de estado, panel de métricas, visualización de métricas, registrar usuario, iniciar sesión y modificar datos del usuario, gestionar métodos de pago simulados, consultar compras asociadas y sus detalles.
+
 Evento: Crear, actualizar, eliminar y consultar eventos, publicar/pausar/cancelar eventos, consultar disponibilidad del evento por zonas y asientos.
+
 Recinto: Asientos, crear, actualizar, eliminar y consultar recintos, administrar zonas asociadas al recinto.
+
 Zona: Crear, actualizar, eliminar y consultar zonas, definir precio base y capacidad por zona, consultar ocupación por zona.
-Asiento: Crear/actualizar/eliminar/consultar asientos por zona, cambiar estado del asiento, consultar mapa de asientos y disponibilidad
-Compra: Crear compras nuevas, modificar una compra antes de pagar, cancelar una compra según reglas/políticas, consultar detalle de una compra
-Entrada: Generar entradas asociadas a una compra pagada, consultar entradas por compra y por evento, anular entradas por cancelación/reembolso
+
+Asiento: Crear/actualizar/eliminar/consultar asientos por zona, cambiar estado del asiento, consultar mapa de asientos y disponibilidad.
+
+Compra: Crear compras nuevas, modificar una compra antes de pagar, cancelar una compra según reglas/políticas, consultar detalle de una compra.
+
+Entrada: Generar entradas asociadas a una compra pagada, consultar entradas por compra y por evento, anular entradas por cancelación/reembolso.
+
 Incidencia: Registrar incidencias y asociarlas a eventos o compras, consultar incidencias por rango de fechas y tipo.
+
 ¿Qué debo hacer para probar las funcionalidades? 
+
 para probar las funcionalidades se necesitaría crear un usuario corriente y un usuario administrador, con el usuario corriente intentar cambiar los datos, ver y consultar datos de eventos desde usuario, intentar comprar, reembolsar o crear incidencias en diferentes eventos con diferentes políticas, intentar cambiar las compras antes de terminarlas y después de terminarlas, con el usuario administrador intentar cambiar información o eliminar diferentes usuarios corriente, gestionar eventos, recintos, zonas, asientos, disponibilidad y compras, registrar incidencias y cambios de estado, también observar el panel de métricas y visualizarlas, para el recinto, crear uno,  administrar las zonas asociadas, actualizarla y eliminarla, crear asientos cambiarlos de estado, mostrar el mapa de asientos con la disponibilidad, crear y modificar compras, cancelarlas en diferentes eventos con diferentes políticas, usar las compras para generar entradas, consultar las compras junto a su entrada asociada y anularlas junto a su compra, además de forzar incidencias para crear registros y consultarlos según su rango fecha y tipo.
+
 ¿Qué puedo reutilizar? 
-los patrones de diseño Singleton, Factory method, Builder, Decorator,  Adapter, Facade, Strategy, Observer, State
+
+los patrones de diseño Singleton, Factory method, Builder, Decorator,  Adapter, Facade, Strategy, Observer, State.
+
 ¿Cómo pruebo/escribo la solución en Java? 
+
 /código en el repositorio/
+
 PATRONES QUE SE IMPLEMENTAN 
 
 
