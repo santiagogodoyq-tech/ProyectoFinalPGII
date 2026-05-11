@@ -1,7 +1,7 @@
 # ProyectoFinalPGII
 Sara Benjumea Gallego
 Santiago Godoy Quitian
-1Pensamiento computacional
+1 Pensamiento computacional
 Abstracción:
 ¿Qué se solicita?
 Se solicita crear una aplicación que permita gestionar eventos, compra de entradas y perfiles de usuarios, mientras se tiene en cuenta los asientos, si esta ocupados o no, mantener registros de los pagos, ademas de tener en cuenta las anomalías y registrarlas como incidencias.
